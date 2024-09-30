@@ -24,7 +24,7 @@ public class SaleHandler implements HttpHandler {
     private Gson gson = new Gson(); // Create a Gson instance for JSON conversion
 
     public void handle(HttpExchange exchange) throws IOException {
-        saleDAO = new saleDAO(connection);
+        saleDAO = new SaleDAO(connection);
 
         if (isGet(exchange)) {
             handleGet(exchange);
